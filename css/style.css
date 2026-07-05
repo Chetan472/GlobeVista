@@ -25,6 +25,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .hero-bg {
@@ -38,6 +39,7 @@ body {
   object-fit: cover;
   z-index: -1;
 }
+
 /* Header */
 
 header {
@@ -652,7 +654,7 @@ header {
   border: none;
   border-radius: 40px;
 
-  background: #ff7a00;
+  background: #009688;
   color: white;
 
   font-size: 18px;
@@ -715,7 +717,7 @@ header {
   border: none;
   border-radius: 40px;
 
-  background: #ff7a00;
+  background: #009688;
   color: white;
 
   font-size: 18px;
@@ -812,7 +814,7 @@ header {
 }
 
 .footer-box a:hover {
-  color: #ff7a00;
+  color: #009688;
 }
 
 .footer hr {
