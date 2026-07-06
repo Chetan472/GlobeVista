@@ -43,16 +43,16 @@ body {
 /* Header */
 
 header {
-  width: 100%;
-  padding: 20px 8%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 
 /* Logo */
@@ -104,7 +104,8 @@ header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 50px;
+
   padding: 12px 28px;
   background: #ff7a00;
   color: #fff;
@@ -116,8 +117,67 @@ header {
 }
 
 .button:hover {
-  background: #ff5a00;
+  background: #ca659e;
   transform: translateY(-3px);
+}
+
+.toggle {
+  padding: 8px 15px;
+  font-size: 15px;
+  border: none;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toggle:hover {
+  background: #e2e8f0;
+}
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .destinations,
+.dark-mode .packages,
+.dark-mode .stats,
+.dark-mode .gallery,
+.dark-mode .testimonials,
+.dark-mode .offers,
+.dark-mode .contact,
+.dark-mode footer {
+  background-color: black;
+}
+.dark-mode .stats {
+  background: #000;
+}
+
+.dark-mode .offers {
+  background: #000;
+  background-image: none;
+}
+
+.dark-mode .stat-card,
+.dark-mode .offer-content {
+  background: #1e293b;
+  color: white;
+}
+
+.dark-mode .offers h2,
+.dark-mode .offers h4,
+.dark-mode .offers p,
+.dark-mode .stats h2,
+.dark-mode .stats p {
+  color: white;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p,
+.dark-mode a {
+  color: white;
 }
 /* Hero Content */
 
