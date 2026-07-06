@@ -101,6 +101,10 @@ header {
 /* Book Button */
 
 .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   padding: 12px 28px;
   background: #ff7a00;
   color: #fff;
@@ -115,7 +119,6 @@ header {
   background: #ff5a00;
   transform: translateY(-3px);
 }
-
 /* Hero Content */
 
 .hero-content {
@@ -783,7 +786,7 @@ header {
 /* Footer */
 
 .footer {
-  background: #0f172a;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
   color: white;
   padding: 70px 8% 20px;
 }
