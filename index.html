@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GlobeVista</title>
+    <meta name="description" content="GlobeVista - Explore beyond boundaries. Book your next adventure with amazing travel packages to worldwide destinations." />
+    <meta name="keywords" content="travel, destinations, tours, vacation, booking" />
+    <title>GlobeVista - Explore Beyond Boundaries</title>
 
     <link rel="stylesheet" href="css/style.css" />
 
@@ -16,7 +18,7 @@
 
   <body>
     <section class="hero">
-      <img class="hero-bg" src="images/bgc.jpg" alt="Background" />
+      <img class="hero-bg" src="images/bgc.jpg" alt="Beautiful travel destination background" />
       <!-- Header -->
       <header>
         <div class="logo">
@@ -28,7 +30,14 @@
           </div>
         </div>
 
-        <nav class="nav">
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav" id="navMenu">
           <a href="#home">Home</a>
           <a href="#destination">Destinations</a>
           <a href="#packages">Packages</a>
@@ -40,7 +49,7 @@
         </nav>
 
         <button class="button">Book Now</button>
-        <button class="toggle" onclick="toggleTheme()">🌙</button>
+        <button class="toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
       </header>
 
       <!-- Hero Content -->
@@ -56,26 +65,27 @@
         </div>
       </div>
     </section>
+
     <section class="search-section">
       <div class="search-box">
         <div class="input-box">
-          <label>Destination</label>
-          <input type="text" placeholder="Where to?" />
+          <label for="destination-input">Destination</label>
+          <input type="text" id="destination-input" placeholder="Where to?" />
         </div>
 
         <div class="input-box">
-          <label>Check In</label>
-          <input type="date" />
+          <label for="checkin-input">Check In</label>
+          <input type="date" id="checkin-input" />
         </div>
 
         <div class="input-box">
-          <label>Check Out</label>
-          <input type="date" />
+          <label for="checkout-input">Check Out</label>
+          <input type="date" id="checkout-input" />
         </div>
 
         <div class="input-box">
-          <label>Guests</label>
-          <select>
+          <label for="guests-select">Guests</label>
+          <select id="guests-select">
             <option>1 Guest</option>
             <option>2 Guests</option>
             <option>3 Guests</option>
@@ -84,77 +94,80 @@
           </select>
         </div>
 
-        <button class="search-btn">Search</button>
+        <button class="search-btn" id="searchBtn">Search</button>
       </div>
+      <div id="searchMessage" class="search-message"></div>
     </section>
+
     <section id="destination" class="destinations">
       <div class="section-title">
         <h2>Popular Destinations</h2>
         <p>Explore our most loved travel destinations around the world.</p>
       </div>
 
-      <div class="destination-container">
+      <div class="destination-container" id="destinationContainer">
         <div class="card">
-          <img src="images/bali.jpg" alt="Bali" />
+          <img src="images/bali.jpg" alt="Bali, Indonesia - Tropical Paradise" />
           <div class="card-content">
             <h3>Bali, Indonesia</h3>
             <p>⭐ 4.9 | Tropical Paradise</p>
             <span>From ₹45,999</span>
-            <button>Explore</button>
+            <button class="explore-card-btn">Explore</button>
           </div>
         </div>
 
         <div class="card">
-          <img src="images/maldives.jpg" alt="Maldives" />
+          <img src="images/maldives.jpg" alt="Maldives - Luxury Beaches" />
           <div class="card-content">
             <h3>Maldives</h3>
             <p>⭐ 4.8 | Luxury Beaches</p>
             <span>From ₹69,999</span>
-            <button>Explore</button>
+            <button class="explore-card-btn">Explore</button>
           </div>
         </div>
 
         <div class="card">
-          <img src="images/swizerland.jpg" alt="Switzerland" />
+          <img src="images/swizerland.jpg" alt="Switzerland - Snow Mountains" />
           <div class="card-content">
             <h3>Switzerland</h3>
             <p>⭐ 4.9 | Snow Mountains</p>
             <span>From ₹89,999</span>
-            <button>Explore</button>
+            <button class="explore-card-btn">Explore</button>
           </div>
         </div>
 
         <div class="card">
-          <img src="images/dubai.jpg" alt="Dubai" />
+          <img src="images/dubai.jpg" alt="Dubai - Modern Luxury" />
           <div class="card-content">
             <h3>Dubai</h3>
             <p>⭐ 4.8 | Modern Luxury</p>
             <span>From ₹55,999</span>
-            <button>Explore</button>
+            <button class="explore-card-btn">Explore</button>
           </div>
         </div>
 
         <div class="card">
-          <img src="images/kasmir.jpg" alt="Kashmir" />
+          <img src="images/kasmir.jpg" alt="Kashmir - Heaven on Earth" />
           <div class="card-content">
             <h3>Kashmir</h3>
             <p>⭐ 4.9 | Heaven on Earth</p>
             <span>From ₹29,999</span>
-            <button>Explore</button>
+            <button class="explore-card-btn">Explore</button>
           </div>
         </div>
 
         <div class="card">
-          <img src="images/santroni.jpg" alt="Santorini" />
+          <img src="images/santroni.jpg" alt="Santorini - Greek Island" />
           <div class="card-content">
             <h3>Santorini</h3>
             <p>⭐ 4.8 | Greek Island</p>
             <span>From ₹79,999</span>
-            <button>Explore</button>
+            <button class="explore-card-btn">Explore</button>
           </div>
         </div>
       </div>
     </section>
+
     <section class="why-us">
       <div class="section-title">
         <h2>Why Choose GlobeVista?</h2>
@@ -187,6 +200,7 @@
         </div>
       </div>
     </section>
+
     <section id="packages" class="packages">
       <div class="section-title">
         <h2>Featured Tour Packages</h2>
@@ -195,7 +209,7 @@
 
       <div class="package-container">
         <div class="package-card">
-          <img src="images/bali.jpg" alt="Bali" />
+          <img src="images/bali.jpg" alt="Bali Adventure Package" />
 
           <div class="package-content">
             <h3>Bali Adventure</h3>
@@ -203,13 +217,13 @@
 
             <div class="price">
               <span>₹45,999</span>
-              <button>Book Now</button>
+              <button class="book-package-btn">Book Now</button>
             </div>
           </div>
         </div>
 
         <div class="package-card">
-          <img src="images/maldives.jpg" alt="Maldives" />
+          <img src="images/maldives.jpg" alt="Maldives Escape Package" />
 
           <div class="package-content">
             <h3>Maldives Escape</h3>
@@ -217,13 +231,13 @@
 
             <div class="price">
               <span>₹69,999</span>
-              <button>Book Now</button>
+              <button class="book-package-btn">Book Now</button>
             </div>
           </div>
         </div>
 
         <div class="package-card">
-          <img src="images/swizerland.jpg" alt="Switzerland" />
+          <img src="images/swizerland.jpg" alt="Swiss Alps Tour Package" />
 
           <div class="package-content">
             <h3>Swiss Alps Tour</h3>
@@ -231,7 +245,7 @@
 
             <div class="price">
               <span>₹89,999</span>
-              <button>Book Now</button>
+              <button class="book-package-btn">Book Now</button>
             </div>
           </div>
         </div>
@@ -254,7 +268,6 @@
         <button class="offer-btn">Book Now</button>
       </div>
     </section>
-    <!-- gallery -->
 
     <!-- Travel Gallery -->
 
@@ -268,7 +281,7 @@
 
       <div class="gallery-container">
         <div class="gallery-card">
-          <img src="images/bali.jpg" alt="Bali" />
+          <img src="images/bali.jpg" alt="Bali - Indonesia" />
           <div class="overlay">
             <h3>Bali</h3>
             <p>Indonesia</p>
@@ -276,7 +289,7 @@
         </div>
 
         <div class="gallery-card">
-          <img src="images/maldives.jpg" alt="Maldives" />
+          <img src="images/maldives.jpg" alt="Maldives - Luxury Beaches" />
           <div class="overlay">
             <h3>Maldives</h3>
             <p>Luxury Beaches</p>
@@ -284,7 +297,7 @@
         </div>
 
         <div class="gallery-card">
-          <img src="images/swizerland.jpg" alt="Switzerland" />
+          <img src="images/swizerland.jpg" alt="Switzerland - Swiss Alps" />
           <div class="overlay">
             <h3>Switzerland</h3>
             <p>Swiss Alps</p>
@@ -292,7 +305,7 @@
         </div>
 
         <div class="gallery-card">
-          <img src="images/dubai.jpg" alt="Dubai" />
+          <img src="images/dubai.jpg" alt="Dubai - City of Luxury" />
           <div class="overlay">
             <h3>Dubai</h3>
             <p>City of Luxury</p>
@@ -300,7 +313,7 @@
         </div>
 
         <div class="gallery-card">
-          <img src="images/kasmir.jpg" alt="Kashmir" />
+          <img src="images/kasmir.jpg" alt="Kashmir - Paradise on Earth" />
           <div class="overlay">
             <h3>Kashmir</h3>
             <p>Paradise on Earth</p>
@@ -308,7 +321,7 @@
         </div>
 
         <div class="gallery-card">
-          <img src="images/santroni.jpg" alt="Santorini" />
+          <img src="images/santroni.jpg" alt="Santorini - Greek Paradise" />
           <div class="overlay">
             <h3>Santorini</h3>
             <p>Greek Paradise</p>
@@ -316,7 +329,8 @@
         </div>
       </div>
     </section>
-    <!-- reviews -->
+
+    <!-- Reviews Section -->
     <section id="reviews" class="testimonials">
       <div class="section-title">
         <h2>What Our Travelers Say</h2>
@@ -325,7 +339,7 @@
 
       <div class="testimonial-container">
         <div class="testimonial-card">
-          <img src="images/rahul.jpeg" alt="Customer 1" />
+          <img src="images/rahul.jpeg" alt="Rahul Sharma - Customer testimonial" />
           <h3>Rahul Sharma</h3>
           <span>⭐⭐⭐⭐⭐</span>
           <p>
@@ -335,7 +349,7 @@
         </div>
 
         <div class="testimonial-card">
-          <img src="images/patel.jpeg" alt="Customer 2" />
+          <img src="images/patel.jpeg" alt="Priya Patel - Customer testimonial" />
           <h3>Priya Patel</h3>
           <span>⭐⭐⭐⭐⭐</span>
           <p>
@@ -345,7 +359,7 @@
         </div>
 
         <div class="testimonial-card">
-          <img src="images/amitverma.jpeg" alt="Customer 3" />
+          <img src="images/amitverma.jpeg" alt="Amit Verma - Customer testimonial" />
           <h3>Amit Verma</h3>
           <span>⭐⭐⭐⭐⭐</span>
           <p>
@@ -402,19 +416,63 @@
       <div class="contact-container">
         <!-- Contact Form -->
 
-        <div id=" contact" class="contact-form">
-          <form>
-            <input type="text" placeholder="Full Name" required />
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <input 
+                type="text" 
+                id="fullName" 
+                placeholder="Full Name" 
+                required 
+                aria-label="Full Name"
+              />
+              <span class="error-message" id="nameError"></span>
+            </div>
 
-            <input type="email" placeholder="Email Address" required />
+            <div class="form-group">
+              <input 
+                type="email" 
+                id="emailAddress" 
+                placeholder="Email Address" 
+                required 
+                aria-label="Email Address"
+              />
+              <span class="error-message" id="emailError"></span>
+            </div>
 
-            <input type="tel" placeholder="Phone Number" required />
+            <div class="form-group">
+              <input 
+                type="tel" 
+                id="phoneNumber" 
+                placeholder="Phone Number" 
+                required 
+                aria-label="Phone Number"
+              />
+              <span class="error-message" id="phoneError"></span>
+            </div>
 
-            <input type="text" placeholder="Destination" />
+            <div class="form-group">
+              <input 
+                type="text" 
+                id="destination" 
+                placeholder="Destination" 
+                aria-label="Destination"
+              />
+            </div>
 
-            <textarea rows="6" placeholder="Your Message"></textarea>
+            <div class="form-group">
+              <textarea 
+                id="message" 
+                rows="6" 
+                placeholder="Your Message" 
+                required 
+                aria-label="Message"
+              ></textarea>
+              <span class="error-message" id="messageError"></span>
+            </div>
 
-            <button type="submit">Send Message</button>
+            <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+            <div id="formMessage" class="form-message"></div>
           </form>
         </div>
 
@@ -434,14 +492,18 @@
           <p>9:00 AM - 7:00 PM</p>
 
           <div class="social-icons">
-            <a href="#">🌐</a>
-            <a href="#">📘</a>
-            <a href="#">📸</a>
-            <a href="#">▶</a>
+            <a href="#" aria-label="Visit our website">🌐</a>
+            <a href="#" aria-label="Follow us on Facebook">📘</a>
+            <a href="#" aria-label="Follow us on Instagram">📸</a>
+            <a href="#" aria-label="Subscribe on YouTube">▶</a>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Go to Top Button -->
+    <button class="go-to-top" id="goToTopBtn" aria-label="Go to top of page">↑ Top</button>
+
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-box">
@@ -454,11 +516,11 @@
         <div class="footer-box">
           <h3>Quick Links</h3>
 
-          <a href="#">Home</a>
-          <a href="#">Destinations</a>
-          <a href="#">Packages</a>
-          <a href="#">Gallery</a>
-          <a href="#">Contact</a>
+          <a href="#home">Home</a>
+          <a href="#destination">Destinations</a>
+          <a href="#packages">Packages</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
         </div>
 
         <div class="footer-box">
@@ -483,6 +545,7 @@
 
       <p class="copyright">© 2026 GlobeVista. All Rights Reserved.</p>
     </footer>
-    <script src="/script.js"></script>
+
+    <script src="script.js"></script>
   </body>
 </html>
