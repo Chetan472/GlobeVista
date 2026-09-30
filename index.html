@@ -3,521 +3,454 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="GlobeVista - Explore beyond boundaries. Book your next adventure with amazing travel packages to worldwide destinations." />
-    <meta name="keywords" content="travel, destinations, tours, vacation, booking" />
+    <meta
+      name="description"
+      content="GlobeVista - Explore beyond boundaries. Book travel experiences across the world."
+    />
+    <meta
+      name="keywords"
+      content="travel, destinations, tours, booking, holidays, GlobeVista"
+    />
     <title>GlobeVista - Explore Beyond Boundaries</title>
-
     <link rel="stylesheet" href="css/style.css" />
-
-    <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
-
   <body>
-    <section class="hero">
-      <img class="hero-bg" src="images/bgc.jpg" alt="Beautiful travel destination background" />
-      <!-- Header -->
-      <header>
-        <div class="logo">
-          <img src="images/logo.png" alt="GlobeVista Logo" />
-
-          <div class="logo-text">
-            <h1>GlobeVista</h1>
-            <p>Explore Beyond Boundaries</p>
-          </div>
-        </div>
-
-        <!-- Hamburger Menu Button -->
-        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <nav class="nav" id="navMenu">
-          <a href="#home">Home</a>
-          <a href="#destination">Destinations</a>
-          <a href="#packages">Packages</a>
-          <a href="#offers">Offers</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#stats">Achievements</a>
-          <a href="#contact">Contact</a>
-        </nav>
-
-        <button class="button">Book Now</button>
-        <button class="toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
-      </header>
-
-      <!-- Hero Content -->
-
-      <div class="hero-content">
-        <h2>Explore The World With GlobeVista</h2>
-
-        <p>Discover breathtaking destinations and unforgettable adventures.</p>
-
-        <div class="hero-buttons">
-          <button class="explore-btn">Explore Tours</button>
-          <button class="book-btn">Book Now</button>
+    <header>
+      <div class="logo" aria-label="Go to top">
+        <img src="images/logo.png" alt="GlobeVista logo" />
+        <div class="logo-text">
+          <h1>GlobeVista</h1>
+          <p>Explore Beyond Boundaries</p>
         </div>
       </div>
-    </section>
 
-    <section class="search-section">
-      <div class="search-box">
-        <div class="input-box">
-          <label for="destination-input">Destination</label>
-          <input type="text" id="destination-input" placeholder="Where to?" />
-        </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-        <div class="input-box">
-          <label for="checkin-input">Check In</label>
-          <input type="date" id="checkin-input" />
-        </div>
+      <nav class="nav" id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#packages">Packages</a>
+        <a href="#offers">Offers</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-        <div class="input-box">
-          <label for="checkout-input">Check Out</label>
-          <input type="date" id="checkout-input" />
-        </div>
-
-        <div class="input-box">
-          <label for="guests-select">Guests</label>
-          <select id="guests-select">
-            <option>1 Guest</option>
-            <option>2 Guests</option>
-            <option>3 Guests</option>
-            <option>4 Guests</option>
-            <option>5+ Guests</option>
-          </select>
-        </div>
-
-        <button class="search-btn" id="searchBtn">Search</button>
-      </div>
-      <div id="searchMessage" class="search-message"></div>
-    </section>
-
-    <section id="destination" class="destinations">
-      <div class="section-title">
-        <h2>Popular Destinations</h2>
-        <p>Explore our most loved travel destinations around the world.</p>
+      <div class="auth-buttons" id="authButtons">
+        <button class="login-btn" data-open-auth="login">Login</button>
+        <button class="signup-btn" data-open-auth="signup">Sign Up</button>
       </div>
 
-      <div class="destination-container" id="destinationContainer">
-        <div class="card">
-          <img src="images/bali.jpg" alt="Bali, Indonesia - Tropical Paradise" />
-          <div class="card-content">
-            <h3>Bali, Indonesia</h3>
-            <p>⭐ 4.9 | Tropical Paradise</p>
-            <span>From ₹45,999</span>
-            <button class="explore-card-btn">Explore</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="images/maldives.jpg" alt="Maldives - Luxury Beaches" />
-          <div class="card-content">
-            <h3>Maldives</h3>
-            <p>⭐ 4.8 | Luxury Beaches</p>
-            <span>From ₹69,999</span>
-            <button class="explore-card-btn">Explore</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="images/swizerland.jpg" alt="Switzerland - Snow Mountains" />
-          <div class="card-content">
-            <h3>Switzerland</h3>
-            <p>⭐ 4.9 | Snow Mountains</p>
-            <span>From ₹89,999</span>
-            <button class="explore-card-btn">Explore</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="images/dubai.jpg" alt="Dubai - Modern Luxury" />
-          <div class="card-content">
-            <h3>Dubai</h3>
-            <p>⭐ 4.8 | Modern Luxury</p>
-            <span>From ₹55,999</span>
-            <button class="explore-card-btn">Explore</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="images/kasmir.jpg" alt="Kashmir - Heaven on Earth" />
-          <div class="card-content">
-            <h3>Kashmir</h3>
-            <p>⭐ 4.9 | Heaven on Earth</p>
-            <span>From ₹29,999</span>
-            <button class="explore-card-btn">Explore</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="images/santroni.jpg" alt="Santorini - Greek Island" />
-          <div class="card-content">
-            <h3>Santorini</h3>
-            <p>⭐ 4.8 | Greek Island</p>
-            <span>From ₹79,999</span>
-            <button class="explore-card-btn">Explore</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="why-us">
-      <div class="section-title">
-        <h2>Why Choose GlobeVista?</h2>
-        <p>Your trusted travel partner for unforgettable journeys.</p>
+      <div class="auth-buttons" id="userActions" style="display: none">
+        <button class="button" id="dashboardBtn">Dashboard</button>
+        <button class="button" id="logoutBtn">Logout</button>
       </div>
 
-      <div class="why-container">
-        <div class="why-card">
-          <div class="icon">🌍</div>
-          <h3>Worldwide Destinations</h3>
-          <p>Explore hundreds of amazing destinations across the globe.</p>
-        </div>
+      <button class="toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+    </header>
 
-        <div class="why-card">
-          <div class="icon">💰</div>
-          <h3>Best Price Guarantee</h3>
-          <p>Enjoy affordable travel packages with no hidden charges.</p>
-        </div>
-
-        <div class="why-card">
-          <div class="icon">🛡️</div>
-          <h3>Safe & Secure Booking</h3>
-          <p>Your payments and personal information are always protected.</p>
-        </div>
-
-        <div class="why-card">
-          <div class="icon">🎧</div>
-          <h3>24/7 Customer Support</h3>
-          <p>Our travel experts are available anytime to help you.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="packages" class="packages">
-      <div class="section-title">
-        <h2>Featured Tour Packages</h2>
-        <p>Choose from our handpicked travel experiences.</p>
-      </div>
-
-      <div class="package-container">
-        <div class="package-card">
-          <img src="images/bali.jpg" alt="Bali Adventure Package" />
-
-          <div class="package-content">
-            <h3>Bali Adventure</h3>
-            <p>5 Days / 4 Nights</p>
-
-            <div class="price">
-              <span>₹45,999</span>
-              <button class="book-package-btn">Book Now</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="package-card">
-          <img src="images/maldives.jpg" alt="Maldives Escape Package" />
-
-          <div class="package-content">
-            <h3>Maldives Escape</h3>
-            <p>4 Days / 3 Nights</p>
-
-            <div class="price">
-              <span>₹69,999</span>
-              <button class="book-package-btn">Book Now</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="package-card">
-          <img src="images/swizerland.jpg" alt="Swiss Alps Tour Package" />
-
-          <div class="package-content">
-            <h3>Swiss Alps Tour</h3>
-            <p>7 Days / 6 Nights</p>
-
-            <div class="price">
-              <span>₹89,999</span>
-              <button class="book-package-btn">Book Now</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Special Offers Section -->
-
-    <section class="offers" id="offers">
-      <div class="offer-content">
-        <h4>Limited Time Offer</h4>
-
-        <h2>Summer Vacation Sale</h2>
-
-        <p>
-          Save up to <span>40% OFF</span> on selected international and domestic
-          tour packages. Book today and create unforgettable memories.
-        </p>
-
-        <button class="offer-btn">Book Now</button>
-      </div>
-    </section>
-
-    <!-- Travel Gallery -->
-
-    <section class="gallery" id="gallery">
-      <div class="section-title">
-        <h2>Travel Gallery</h2>
-        <p>
-          Explore breathtaking moments captured from our amazing destinations.
-        </p>
-      </div>
-
-      <div class="gallery-container">
-        <div class="gallery-card">
-          <img src="images/bali.jpg" alt="Bali - Indonesia" />
-          <div class="overlay">
-            <h3>Bali</h3>
-            <p>Indonesia</p>
-          </div>
-        </div>
-
-        <div class="gallery-card">
-          <img src="images/maldives.jpg" alt="Maldives - Luxury Beaches" />
-          <div class="overlay">
-            <h3>Maldives</h3>
-            <p>Luxury Beaches</p>
-          </div>
-        </div>
-
-        <div class="gallery-card">
-          <img src="images/swizerland.jpg" alt="Switzerland - Swiss Alps" />
-          <div class="overlay">
-            <h3>Switzerland</h3>
-            <p>Swiss Alps</p>
-          </div>
-        </div>
-
-        <div class="gallery-card">
-          <img src="images/dubai.jpg" alt="Dubai - City of Luxury" />
-          <div class="overlay">
-            <h3>Dubai</h3>
-            <p>City of Luxury</p>
-          </div>
-        </div>
-
-        <div class="gallery-card">
-          <img src="images/kasmir.jpg" alt="Kashmir - Paradise on Earth" />
-          <div class="overlay">
-            <h3>Kashmir</h3>
-            <p>Paradise on Earth</p>
-          </div>
-        </div>
-
-        <div class="gallery-card">
-          <img src="images/santroni.jpg" alt="Santorini - Greek Paradise" />
-          <div class="overlay">
-            <h3>Santorini</h3>
-            <p>Greek Paradise</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section id="reviews" class="testimonials">
-      <div class="section-title">
-        <h2>What Our Travelers Say</h2>
-        <p>Real experiences from our happy customers.</p>
-      </div>
-
-      <div class="testimonial-container">
-        <div class="testimonial-card">
-          <img src="images/rahul.jpeg" alt="Rahul Sharma - Customer testimonial" />
-          <h3>Rahul Sharma</h3>
-          <span>⭐⭐⭐⭐⭐</span>
+    <main>
+      <section class="hero" id="home">
+        <img class="hero-bg" src="images/bgc.jpg" alt="Beautiful travel background" />
+        <div class="hero-content">
+          <h2>Explore The World With GlobeVista</h2>
           <p>
-            "GlobeVista made our Bali trip unforgettable. Everything was
-            perfectly organized!"
+            Discover breathtaking destinations and unforgettable adventures crafted for every traveler.
           </p>
+          <div class="hero-buttons">
+            <button class="explore-btn" data-scroll-target="#destinations">Explore Tours</button>
+            <button class="book-btn" data-scroll-target="#contact">Book Now</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="search-section">
+        <div class="search-box">
+          <div class="input-box">
+            <label for="destination-input">Destination</label>
+            <input type="text" id="destination-input" placeholder="Where to?" />
+          </div>
+
+          <div class="input-box">
+            <label for="checkin-input">Check In</label>
+            <input type="date" id="checkin-input" />
+          </div>
+
+          <div class="input-box">
+            <label for="checkout-input">Check Out</label>
+            <input type="date" id="checkout-input" />
+          </div>
+
+          <div class="input-box">
+            <label for="guests-select">Travelers</label>
+            <select id="guests-select">
+              <option value="1 Guest">1 Guest</option>
+              <option value="2 Guests">2 Guests</option>
+              <option value="3 Guests">3 Guests</option>
+              <option value="4 Guests">4 Guests</option>
+              <option value="5+ Guests">5+ Guests</option>
+            </select>
+          </div>
+
+          <button class="search-btn" id="searchBtn">Search</button>
+        </div>
+        <div id="searchMessage" class="search-message"></div>
+      </section>
+
+      <section id="destinations" class="destinations">
+        <div class="section-title">
+          <h2>Popular Destinations</h2>
+          <p>Explore our most loved travel destinations around the world.</p>
+        </div>
+        <div class="destination-container" id="destinationContainer"></div>
+      </section>
+
+      <section class="why-us">
+        <div class="section-title">
+          <h2>Why Choose GlobeVista?</h2>
+          <p>Your trusted travel partner for unforgettable journeys.</p>
         </div>
 
-        <div class="testimonial-card">
-          <img src="images/patel.jpeg" alt="Priya Patel - Customer testimonial" />
-          <h3>Priya Patel</h3>
-          <span>⭐⭐⭐⭐⭐</span>
-          <p>
-            "Excellent service, affordable prices, and amazing destinations.
-            Highly recommended!"
-          </p>
+        <div class="why-container">
+          <div class="why-card">
+            <div class="icon">🌍</div>
+            <h3>Worldwide Destinations</h3>
+            <p>Explore hundreds of amazing destinations across the globe.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="icon">💰</div>
+            <h3>Best Price Guarantee</h3>
+            <p>Enjoy affordable travel packages with no hidden charges.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="icon">🛡️</div>
+            <h3>Safe & Secure Booking</h3>
+            <p>Your payments and personal information are secure with us.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="icon">🎧</div>
+            <h3>24/7 Customer Support</h3>
+            <p>Our travel experts are available anytime to guide your journey.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="packages" class="packages">
+        <div class="section-title">
+          <h2>Featured Tour Packages</h2>
+          <p>Choose from handpicked experiences built for unforgettable memories.</p>
         </div>
 
-        <div class="testimonial-card">
-          <img src="images/amitverma.jpeg" alt="Amit Verma - Customer testimonial" />
-          <h3>Amit Verma</h3>
-          <span>⭐⭐⭐⭐⭐</span>
-          <p>
-            "Booking was simple and the support team was available throughout
-            our journey."
-          </p>
+        <div class="filters">
+          <div class="filter-group">
+            <label for="destinationFilter">Destination</label>
+            <select id="destinationFilter">
+              <option value="all">All Destinations</option>
+              <option value="Bali">Bali</option>
+              <option value="Maldives">Maldives</option>
+              <option value="Switzerland">Switzerland</option>
+              <option value="Dubai">Dubai</option>
+              <option value="Kashmir">Kashmir</option>
+              <option value="Santorini">Santorini</option>
+              <option value="Paris">Paris</option>
+              <option value="Goa">Goa</option>
+              <option value="Manali">Manali</option>
+              <option value="Singapore">Singapore</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="categoryFilter">Category</label>
+            <select id="categoryFilter">
+              <option value="all">All</option>
+              <option value="Adventure">Adventure</option>
+              <option value="Beach">Beach</option>
+              <option value="Honeymoon">Honeymoon</option>
+              <option value="Luxury">Luxury</option>
+              <option value="Family">Family</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="priceFilter">Price</label>
+            <select id="priceFilter">
+              <option value="all">All</option>
+              <option value="low">₹0 - ₹50,000</option>
+              <option value="mid">₹50,001 - ₹80,000</option>
+              <option value="high">₹80,001+</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="durationFilter">Duration</label>
+            <select id="durationFilter">
+              <option value="all">All</option>
+              <option value="short">1-4 Days</option>
+              <option value="medium">5-7 Days</option>
+              <option value="long">8+ Days</option>
+            </select>
+          </div>
+
+          <div class="filter-group sort-group">
+            <label>Sort by</label>
+            <button class="sort-btn active" data-sort="default">Default</button>
+            <button class="sort-btn" data-sort="price-low">Price Low</button>
+            <button class="sort-btn" data-sort="price-high">Price High</button>
+            <button class="sort-btn" data-sort="rating">Rating</button>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Statistics Section -->
+        <div class="package-container" id="packageContainer"></div>
+      </section>
 
-    <section class="stats" id="stats">
-      <div class="section-title">
-        <h2>Our Achievements</h2>
-        <p>Trusted by thousands of travelers around the world.</p>
-      </div>
-
-      <div class="stats-container">
-        <div class="stat-card">
-          <div class="stat-icon">👨‍👩‍👧‍👦</div>
-          <h3>50K+</h3>
-          <p>Happy Travelers</p>
+      <section id="offers" class="offers">
+        <div class="section-title">
+          <h2 style="color: #fff">Exclusive Offers</h2>
+          <p style="color: rgba(255,255,255,0.9)">Save on your next trip with fantastic travel deals.</p>
         </div>
+        <div class="offers-container" id="offersContainer"></div>
+      </section>
 
-        <div class="stat-card">
-          <div class="stat-icon">🌍</div>
-          <h3>150+</h3>
-          <p>Destinations</p>
+      <section id="gallery" class="gallery">
+        <div class="section-title">
+          <h2>Travel Gallery</h2>
+          <p>Explore breathtaking moments captured from our favorite destinations.</p>
         </div>
+        <div class="gallery-container" id="galleryContainer"></div>
+      </section>
 
-        <div class="stat-card">
-          <div class="stat-icon">🏆</div>
-          <h3>12+</h3>
-          <p>Years Experience</p>
+      <section id="reviews" class="testimonials">
+        <div class="section-title">
+          <h2>What Our Travelers Say</h2>
+          <p>Real experiences from our happy customers.</p>
         </div>
+        <div class="testimonial-container" id="reviewsContainer"></div>
 
-        <div class="stat-card">
-          <div class="stat-icon">⭐</div>
-          <h3>4.9</h3>
-          <p>Customer Rating</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-
-    <section class="contact" id="contact">
-      <div class="section-title">
-        <h2>Contact Us</h2>
-        <p>We're here to help you plan your next unforgettable journey.</p>
-      </div>
-
-      <div class="contact-container">
-        <!-- Contact Form -->
-
-        <div class="contact-form">
-          <form id="contactForm">
+        <div class="contact-form" style="max-width: 700px; margin: 40px auto 0;">
+          <form id="reviewForm">
             <div class="form-group">
-              <input 
-                type="text" 
-                id="fullName" 
-                placeholder="Full Name" 
-                required 
-                aria-label="Full Name"
-              />
-              <span class="error-message" id="nameError"></span>
+              <label for="reviewDestination">Destination</label>
+              <select id="reviewDestination" required>
+                <option value="">Select destination</option>
+                <option value="Bali">Bali</option>
+                <option value="Maldives">Maldives</option>
+                <option value="Switzerland">Switzerland</option>
+                <option value="Dubai">Dubai</option>
+                <option value="Kashmir">Kashmir</option>
+                <option value="Santorini">Santorini</option>
+                <option value="Paris">Paris</option>
+                <option value="Goa">Goa</option>
+                <option value="Manali">Manali</option>
+                <option value="Singapore">Singapore</option>
+              </select>
             </div>
 
             <div class="form-group">
-              <input 
-                type="email" 
-                id="emailAddress" 
-                placeholder="Email Address" 
-                required 
-                aria-label="Email Address"
-              />
-              <span class="error-message" id="emailError"></span>
+              <label for="reviewRating">Rating</label>
+              <select id="reviewRating" required>
+                <option value="5">5 stars</option>
+                <option value="4">4 stars</option>
+                <option value="3">3 stars</option>
+              </select>
             </div>
 
             <div class="form-group">
-              <input 
-                type="tel" 
-                id="phoneNumber" 
-                placeholder="Phone Number" 
-                required 
-                aria-label="Phone Number"
-              />
-              <span class="error-message" id="phoneError"></span>
+              <label for="reviewMessage">Your Review</label>
+              <textarea id="reviewMessage" rows="4" required placeholder="Share your experience..."></textarea>
             </div>
 
-            <div class="form-group">
-              <input 
-                type="text" 
-                id="destination" 
-                placeholder="Destination" 
-                aria-label="Destination"
-              />
-            </div>
-
-            <div class="form-group">
-              <textarea 
-                id="message" 
-                rows="6" 
-                placeholder="Your Message" 
-                required 
-                aria-label="Message"
-              ></textarea>
-              <span class="error-message" id="messageError"></span>
-            </div>
-
-            <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
-            <div id="formMessage" class="form-message"></div>
+            <button type="submit" class="form-btn">Submit Review</button>
+            <div id="reviewMessageBox" class="form-message"></div>
           </form>
         </div>
+      </section>
 
-        <!-- Contact Information -->
+      <section id="about" class="about">
+        <div class="section-title">
+          <h2>About GlobeVista</h2>
+          <p>We help travelers explore soulful experiences with confidence.</p>
+        </div>
 
-        <div class="contact-info">
-          <h3>Get In Touch</h3>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              GlobeVista is a modern travel company helping adventurers plan their dream escapes with curated routes,
+              trusted stays, and seamless experience from booking to return.
+            </p>
+            <p>
+              From island getaways to mountain retreats, we bring together destination expertise, customer-centric service,
+              and carefully planned itineraries that turn every trip into a story worth telling.
+            </p>
 
-          <p>📍 7th Main Road BTM Layout, Bengaluru, Karnataka, India</p>
+            <div class="about-stats">
+              <div class="about-stat">
+                <div class="number">150+</div>
+                <div class="label">Destinations</div>
+              </div>
+              <div class="about-stat">
+                <div class="number">50K+</div>
+                <div class="label">Travelers</div>
+              </div>
+              <div class="about-stat">
+                <div class="number">500+</div>
+                <div class="label">Packages</div>
+              </div>
+              <div class="about-stat">
+                <div class="number">12+</div>
+                <div class="label">Years Experience</div>
+              </div>
+            </div>
+          </div>
 
-          <p>📞 +91 98765 43210</p>
+          <img src="images/bgc.jpg" alt="Travel destination" style="width:100%; border-radius: 20px; object-fit: cover; height: 420px;" />
+        </div>
+      </section>
 
-          <p>📧 chetan@globevista.com</p>
+      <section id="stats" class="stats">
+        <div class="section-title">
+          <h2>Our Achievements</h2>
+          <p>Trusted by thousands of travelers around the world.</p>
+        </div>
 
-          <p>🕒 Monday - Saturday</p>
+        <div class="stats-container">
+          <div class="stat-card">
+            <div class="stat-icon">👨‍👩‍👧‍👦</div>
+            <h3>50K+</h3>
+            <p>Happy Travelers</p>
+          </div>
 
-          <p>9:00 AM - 7:00 PM</p>
+          <div class="stat-card">
+            <div class="stat-icon">🌍</div>
+            <h3>150+</h3>
+            <p>Destinations</p>
+          </div>
 
-          <div class="social-icons">
-            <a href="#" aria-label="Visit our website">🌐</a>
-            <a href="#" aria-label="Follow us on Facebook">📘</a>
-            <a href="#" aria-label="Follow us on Instagram">📸</a>
-            <a href="#" aria-label="Subscribe on YouTube">▶</a>
+          <div class="stat-card">
+            <div class="stat-icon">🏆</div>
+            <h3>12+</h3>
+            <p>Years Experience</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">⭐</div>
+            <h3>4.9</h3>
+            <p>Customer Rating</p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Go to Top Button -->
-    <button class="go-to-top" id="goToTopBtn" aria-label="Go to top of page">↑ Top</button>
+      <section id="contact" class="contact">
+        <div class="section-title">
+          <h2>Contact Us</h2>
+          <p>We're here to help you plan your next unforgettable journey.</p>
+        </div>
+
+        <div class="contact-container">
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="contactName">Name</label>
+                <input id="contactName" type="text" placeholder="Your full name" required />
+                <span class="error-message" id="contactNameError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail">Email</label>
+                <input id="contactEmail" type="email" placeholder="Your email address" required />
+                <span class="error-message" id="contactEmailError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject">Subject</label>
+                <input id="contactSubject" type="text" placeholder="Trip inquiry / support" required />
+                <span class="error-message" id="contactSubjectError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage">Message</label>
+                <textarea id="contactMessage" rows="5" placeholder="Tell us about your travel plans" required></textarea>
+                <span class="error-message" id="contactMessageError"></span>
+              </div>
+
+              <button type="submit" class="form-btn">Send Message</button>
+              <div id="contactFormMessage" class="form-message"></div>
+            </form>
+          </div>
+
+          <div class="contact-info">
+            <h3>Get In Touch</h3>
+            <p>📍 7th Main Road BTM Layout, Bengaluru, Karnataka, India</p>
+            <p>📞 +91 98765 43210</p>
+            <p>📧 chetan@globevista.com</p>
+            <p>🕒 Monday - Saturday</p>
+            <p>9:00 AM - 7:00 PM</p>
+            <div class="social-icons">
+              <a href="#" aria-label="Website">🌐</a>
+              <a href="#" aria-label="Facebook">📘</a>
+              <a href="#" aria-label="Instagram">📸</a>
+              <a href="#" aria-label="YouTube">▶</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="dashboard" class="dashboard" style="display: none">
+        <div class="dashboard-container">
+          <div class="dashboard-header">
+            <h1>My Dashboard</h1>
+            <button class="button" id="closeDashboardBtn">Close</button>
+          </div>
+
+          <div class="dashboard-tabs">
+            <button class="dashboard-tab active" data-tab="profile">Profile</button>
+            <button class="dashboard-tab" data-tab="upcoming">Upcoming Trips</button>
+            <button class="dashboard-tab" data-tab="history">Previous Trips</button>
+            <button class="dashboard-tab" data-tab="favorites">Favorites</button>
+          </div>
+
+          <div class="dashboard-section active" id="profileTab">
+            <div class="profile-card" id="profileCard"></div>
+          </div>
+
+          <div class="dashboard-section" id="upcomingTab">
+            <div class="trips-container" id="upcomingTrips"></div>
+          </div>
+
+          <div class="dashboard-section" id="historyTab">
+            <div class="trips-container" id="previousTrips"></div>
+          </div>
+
+          <div class="dashboard-section" id="favoritesTab">
+            <div class="favorites-grid" id="favoritesGrid"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button class="go-to-top" id="goToTopBtn" aria-label="Go to top of page">↑</button>
 
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-box">
           <h2>🌍 GlobeVista</h2>
-          <p>
-            Explore Beyond Boundaries with unforgettable travel experiences.
-          </p>
+          <p>Explore Beyond Boundaries with unforgettable travel experiences.</p>
         </div>
 
         <div class="footer-box">
           <h3>Quick Links</h3>
-
           <a href="#home">Home</a>
-          <a href="#destination">Destinations</a>
+          <a href="#destinations">Destinations</a>
           <a href="#packages">Packages</a>
           <a href="#gallery">Gallery</a>
           <a href="#contact">Contact</a>
@@ -525,7 +458,6 @@
 
         <div class="footer-box">
           <h3>Travel Types</h3>
-
           <a href="#">Adventure</a>
           <a href="#">Beach</a>
           <a href="#">Honeymoon</a>
@@ -534,7 +466,6 @@
 
         <div class="footer-box">
           <h3>Support</h3>
-
           <a href="#">FAQ</a>
           <a href="#">Privacy Policy</a>
           <a href="#">Terms & Conditions</a>
@@ -542,9 +473,37 @@
       </div>
 
       <hr />
-
       <p class="copyright">© 2026 GlobeVista. All Rights Reserved.</p>
     </footer>
+
+    <div class="modal" id="authModal" aria-modal="true" role="dialog">
+      <div class="modal-content">
+        <button class="modal-close" data-close-modal="authModal">×</button>
+        <div id="authContent"></div>
+      </div>
+    </div>
+
+    <div class="modal" id="detailModal" aria-modal="true" role="dialog">
+      <div class="modal-content">
+        <button class="modal-close" data-close-modal="detailModal">×</button>
+        <div id="detailContent"></div>
+      </div>
+    </div>
+
+    <div class="modal" id="bookingModal" aria-modal="true" role="dialog">
+      <div class="modal-content">
+        <button class="modal-close" data-close-modal="bookingModal">×</button>
+        <div id="bookingContent"></div>
+      </div>
+    </div>
+
+    <div class="lightbox" id="galleryLightbox" aria-modal="true" role="dialog">
+      <button class="lightbox-close" id="closeGallery">×</button>
+      <div class="lightbox-content">
+        <img id="lightboxImage" src="" alt="" />
+        <h3 id="lightboxTitle"></h3>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
